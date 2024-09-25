@@ -111,8 +111,6 @@ if(backgroundChooseLocal !== null){
     }
   })
 
-
-  console.log(backgroundChooseLocal);
   // Stop Work Of Change Background
   backgroundChangeOption = false;
   clearInterval(backgroundInterval);
