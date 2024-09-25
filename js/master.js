@@ -102,7 +102,7 @@ document.querySelector(".setting-box .reset-options").onclick = function (){
 /*----------------------------------------------------*/
 /* Start Choose Background */
 if(backgroundChooseLocal !== null){
-  document.querySelector(".landing").style.backgroundImage = `url("../images/0${backgroundChooseLocal}.jpg")`;
+  document.querySelector(".landing").style.cssText = `background-image: url("../images/0${backgroundChooseLocal}.jpg")`;
 
   // Add Properties Of (active) to Active Image
   chooseBackground.forEach(ima => {
@@ -139,7 +139,7 @@ chooseBackground.forEach(ima => {
 
     localStorage.setItem("background_choose", imag.target.dataset.image);
 
-    document.querySelector(".landing").style.backgroundImage = `url("../images/0${imag.target.dataset.image}.jpg")`;
+    document.querySelector(".landing").style.cssText = `background-image: url("../images/0${imag.target.dataset.image}.jpg")`;
   })
 })
 /* End Choose Background */
@@ -153,7 +153,7 @@ function randomizeImgs(){
   if(backgroundChangeOption === true){
     backgroundInterval = setInterval(() => {
       let randomNumber = Math.floor(Math.random() * changeImages.length);
-      landingPage.style.backgroundImage = `url("../images/${changeImages[randomNumber]}")`;
+      landingPage.style.cssText = `background-image: url("../images/${changeImages[randomNumber]}")`;;
     }, 10000);
   }
 }
